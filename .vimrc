@@ -2,9 +2,9 @@ syntax on
 syntax enable           "enables syntax highlighting
 filetype on
 filetype plugin indent on
-
-set title
-set showtabline=2
+                
+set title                       "enbles the title 
+set showtabline=2               
 set cursorline
 set cmdheight=2
 set background=dark
@@ -14,8 +14,8 @@ set smartindent
 set history=1000
 
 set ruler
-set number relativenumber
-set nowrap          "display long lines as it is
+set number relativenumber       "sets line numbers
+set nowrap                      "display long lines as it is
 set encoding=utf-8
 set fileencoding=utf-8
 " Display incomplete commands
