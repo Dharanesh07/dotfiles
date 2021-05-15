@@ -131,16 +131,11 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 # Custom ZSH Binds
 bindkey '^ ' autosuggest-accept
-
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
-
 # Load plugins; should be last.
 #source ~/.my_zsh/plugins/autojump/autojump.plugin.zsh 2>/dev/null
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
-
 # To customize prompt,
 source ~/.config/zsh/themes/refined.zsh-theme
-
