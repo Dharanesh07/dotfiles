@@ -14,4 +14,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "fzf 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+"which key
+Plug 'liuchengxu/vim-which-key'
+
 call plug#end()
