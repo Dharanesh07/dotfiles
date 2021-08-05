@@ -70,7 +70,7 @@ nnoremap <Space> <Nop>
 
 "Navigating splits
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/autoload/plugged')
 " Make sure you use single quotes
 
 "status line theme
