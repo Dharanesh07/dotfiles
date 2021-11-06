@@ -18,4 +18,6 @@ Plug 'junegunn/fzf.vim'
 "which key
 Plug 'liuchengxu/vim-which-key'
 
+Plug 'mhinz/vim-signify'
+
 call plug#end()

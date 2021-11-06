@@ -4,4 +4,5 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/which_key.vim
+source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/themes/theme.vim
