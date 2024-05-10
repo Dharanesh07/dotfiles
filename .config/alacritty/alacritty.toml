@@ -1,0 +1,165 @@
+#"window.opacity" = 1.0
+
+[colors]
+#author = "Chris Kempson"
+draw_bold_text_with_bright_colors = true
+#name = "Monokai (dark)"
+
+[colors.bright]
+black = "#75715e"
+blue = "#66d9ef"
+cyan = "#a1efe4"
+green = "#a6e22e"
+magenta = "#ae81ff"
+red = "#f92672"
+white = "#f9f8f5"
+yellow = "#f4bf75"
+
+[colors.cursor]
+cursor = "#f8f8f2"
+text = "#272822"
+
+[colors.normal]
+black = "#272822"
+blue = "#66d9ef"
+cyan = "#a1efe4"
+green = "#a6e22e"
+magenta = "#ae81ff"
+red = "#f92672"
+white = "#f8f8f2"
+yellow = "#f4bf75"
+
+[colors.primary]
+background = "#1e1e1e"
+foreground = "#d4d4d4"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "DejaVuSansMono"
+style = "Bold"
+
+[font.bold_italic]
+family = "DejaVuSansMono"
+style = "Bold Italic"
+
+[font.italic]
+family = "DejaVuSansMono"
+style = "Italic"
+
+[font.normal]
+family = "DejaVuSansMono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Paste"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Copy"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ClearLogNotice"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\f"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mode = "~Alt"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"
+mode = "~Alt"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "Home"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "End"
+mode = "~Alt"
+mods = "Shift"
+
+[scrolling]
+history = 5000
+
+[window]
+decorations = "none"
+dynamic_padding = false
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 6
+y = 6
