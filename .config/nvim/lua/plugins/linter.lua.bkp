@@ -1,0 +1,12 @@
+return {
+  'dense-analysis/ale',
+  config = function()
+    -- Set ALE linter for Verilog to use hdl_checker
+    vim.api.nvim_set_var('ale_linters', {
+      verilog = {'hdl_checker'}
+    })
+
+    -- Set options for hdl_checker in ALE
+    vim.api.nvim_set_var('ale_verilog_hdl_checker_options', '--some-option')
+  end,
+}
