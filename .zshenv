@@ -1,6 +1,11 @@
 #!/bin/zsh
 # EXPORT ENVIRONMENT VARIABLE #
 
+typeset -U path PATH
+path=(/opt/nvim-linux64/bin/ /home/robbie/Apps/oss-cad-suite/bin/ /home/robbie/Apps/fzf/bin/ $path)
+#path=(/opt/nvim-linux64/bin/ $path)
+export PATH
+
 #export TERM='rxvt-256color'
 
 
