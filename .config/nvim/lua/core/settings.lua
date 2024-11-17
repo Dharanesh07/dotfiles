@@ -65,4 +65,3 @@ opt.clipboard = "unnamedplus"
 opt.shortmess:append "sI"
 
 
-

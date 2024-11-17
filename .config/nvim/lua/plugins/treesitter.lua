@@ -29,7 +29,7 @@ return {
         "vhdl",
         "lua",
         "vim",
-        "systemverilog",
+        --"systemverilog",
         "gitignore",
         "vimdoc",
         "python"

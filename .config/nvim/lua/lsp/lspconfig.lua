@@ -78,7 +78,7 @@ return {
 
     mason_lspconfig.setup_handlers({
       -- Setup Pyright for Python
-      ["pyright"] = function()
+        ["pyright"] = function()
         lspconfig.pyright.setup({
           capabilities = capabilities,
           on_attach = function(client, bufnr)
@@ -86,13 +86,13 @@ return {
           end,
         })
       end,
-
-      -- Setup Clangd for C/C++
+    -- Setup Clangd for C/C++
       ["clangd"] = function()
         lspconfig.clangd.setup({
           capabilities = capabilities,
-          on_attach = function(client, bufnr)
-            -- Additional configuration for Clangd can be added here
+          root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+          on_attach = function(client, bufnr) 
+                        -- Additional configuration for Clangd can be added here
           end,
         })
       end,
@@ -122,7 +122,7 @@ return {
           end,
         })
       end,
-
+--[[
       -- Setup for hdl_checker
       ["hdl_checker"] = function()
         lspconfig.hdl_checker.setup({
@@ -139,10 +139,30 @@ return {
           on_attach = function(client, bufnr)
             -- Additional configuration for hdl_checker can be added here
           end,
-        })
-      end,
 
-   -- lspconfig.hdl_checker.setup()
-    })
-  end,
+                })
+      end,
+            ]]--
+-- Setup Verible for Verilog and SystemVerilog
+      ["verible"] = function()
+        lspconfig.verible.setup({
+          capabilities = capabilities,
+          cmd = { "verible-verilog-ls", "--rules_config_search" },
+          filetypes = { "verilog", "systemverilog" },
+          root_dir = function(fname)
+            return lspconfig.util.find_git_ancestor(fname) or lspconfig.util.path.dirname(fname)
+          end,
+          on_attach = function(client, bufnr)
+            -- Automatically format on save for Verilog files
+            vim.api.nvim_create_autocmd("BufWritePost", {
+              pattern = "*.v",
+              callback = function()
+                vim.lsp.buf.format({ async = false })
+              end,
+            })
+          end,
+        })
+        end,
+        })
+        end,
 }
