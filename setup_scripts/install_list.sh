@@ -29,6 +29,8 @@ tmux \
 minicom \
 alacritty \
 fonts-roboto \
-fzf
+fzf \
+universal-ctags \
+lazygit
 
 
