@@ -1,5 +1,30 @@
 #!/bin/bash
 
+#commented packages
+#fonts-mathjax 
+#libjs-mathjax
+#mint-backgrounds-vanessa
+#mint-backgrounds-vera
+#mint-themes
+#mint-x-icons
+#mint-y-icons
+#mint-y-icons-legacy
+#mintstick
+#mintwelcome
+#mint-artwork
+#mint-meta-core
+#mint-meta-xfce
+#mint-themes-legacy
+#xfce4-appfinder
+#xfce4-eyes-plugin
+#xfce4-mailwatch-plugin
+#xfce4-timer-plugin
+#xfce4-weather-plugin
+#xfce4-whiskermenu-plugin
+#mint-cursor-themes
+#mintbackup
+#xfce4-dict 
+
 sudo apt purge --ignore-missing \
 fwupd \
 fwupd-signed \
@@ -36,7 +61,6 @@ fonts-lohit-orya \
 fonts-lohit-taml \
 fonts-lohit-taml-classical \
 fonts-lohit-telu \
-fonts-mathjax \
 fonts-mlym \
 fonts-nakula \
 fonts-navilu \
@@ -100,7 +124,6 @@ fonts-knda \
 fonts-orya \
 fonts-taml \
 fonts-telu \
-libjs-mathjax \
 thingy \
 drawing \
 eject \
@@ -135,14 +158,6 @@ hyphen-pt-pt \
 hyphen-ru \
 hypnotix \
 librhythmbox-core10 \
-mint-backgrounds-vanessa \
-mint-backgrounds-vera \
-mint-themes \
-mint-x-icons \
-mint-y-icons \
-mint-y-icons-legacy \
-mintstick \
-mintwelcome \
 casper \
 gir1.2-rb-3.0 \
 libebackend-1.2-10 \
@@ -153,10 +168,6 @@ libedata-book-1.2-26 \
 libedata-cal-2.0-1 \
 libedataserver-1.2-26 \
 libedataserverui-1.2-3 \
-mint-artwork \
-mint-meta-core \
-mint-meta-xfce \
-mint-themes-legacy \
 rhythmbox-plugin-tray-icon \
 rhythmbox-plugins \
 transmission-gtk \
@@ -181,7 +192,6 @@ wngerman \
 wportuguese \
 wspanish \
 wswiss \
-xfce4-dict \
 youtube-dl \
 brltty \
 liblouis20 \
@@ -189,17 +199,19 @@ liblouisutdml-bin \
 liblouisutdml9 \
 orca \
 python3-louis \
-xfce4-appfinder \
-xfce4-eyes-plugin \
-xfce4-mailwatch-plugin \
-xfce4-timer-plugin \
-xfce4-weather-plugin \
-xfce4-whiskermenu-plugin \
-mint-cursor-themes \
-mintbackup \
 hyphen-fi \
 hyphen-ga \
 hyphen-id \
 mythes* \
 speech-dispatcher \
-nano
+nano \
+xreader \
+mint-backgrounds-* \
+mint-themes \
+mint-x-icons \
+mint-y-icons \
+mint-y-icons-legacy \
+mintstick \
+mintwelcome \
+mint-artwork \
+mpv \

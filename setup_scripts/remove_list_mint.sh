@@ -36,7 +36,7 @@ fonts-lohit-orya \
 fonts-lohit-taml \
 fonts-lohit-taml-classical \
 fonts-lohit-telu \
-fonts-mathjax \
+#fonts-mathjax \
 fonts-mlym \
 fonts-nakula \
 fonts-navilu \
@@ -100,7 +100,7 @@ fonts-knda \
 fonts-orya \
 fonts-taml \
 fonts-telu \
-libjs-mathjax \
+#libjs-mathjax \
 thingy \
 drawing \
 eject \

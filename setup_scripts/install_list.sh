@@ -31,6 +31,7 @@ alacritty \
 fonts-roboto \
 fzf \
 universal-ctags \
-lazygit
+lazygit \
+evince
 
 
