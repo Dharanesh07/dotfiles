@@ -1,14 +1,12 @@
 #!/bin/bash
-
 sudo apt purge --ignore-missing \
 fwupd \
 fwupd-signed \
-libfwupd2 \
-libfwupdplugin5 \
+#libfwupd2 \
+#libfwupdplugin5 \
 breeze-cursor-theme \
 breeze-icon-theme \
 catfish \
-celluloid \
 fonts-beng \
 fonts-beng-extra \
 fonts-deva \
@@ -37,7 +35,7 @@ fonts-lohit-taml \
 fonts-lohit-taml-classical \
 fonts-lohit-telu \
 #fonts-mathjax \
-fonts-mlym \
+#fonts-mlym \
 fonts-nakula \
 fonts-navilu \
 fonts-noto-cjk \
