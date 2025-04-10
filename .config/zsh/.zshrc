@@ -79,7 +79,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 # Edit line in vim buffer ctrl-v
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^v' edit-command-line
+#bindkey '^v' edit-command-line
 # Enter vim buffer from normal mode
 autoload -U edit-command-line && zle -N edit-command-line && bindkey -M vicmd "^v" edit-command-line
 
