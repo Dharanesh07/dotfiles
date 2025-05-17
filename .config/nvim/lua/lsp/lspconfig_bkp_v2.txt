@@ -58,15 +58,6 @@ return {
 
         opts.desc = "Restart LSP"
         keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
-
-        -- Print the client info for debugging - this will appear in :messages
-        local client = vim.lsp.get_client_by_id(ev.data.client_id)
-        if client then
-          print(string.format("LSP attached: %s (cmd: %s)",
-            client.name,
-            vim.inspect(client.config.cmd)))
-        end
-
       end,
     })
 
@@ -78,68 +69,70 @@ return {
       severity_sort = true,
     })
 
- -- Mason setup without Verible
     mason.setup()
-  -- Removed the ensure installed to make sure that the mason doesn't config the servers 
-        --[[
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
+        "verible",
         "bashls",
         "clangd",
         "pyright",
-        --"verible"
       },
-    })
-        ]]--
+      handlers = {
+        ["pyright"] = function()
+          lspconfig.pyright.setup({
+            capabilities = capabilities,
+          })
+        end,
 
-    -- Manual server setups (this ensures only one instance of each server)
-    -- Python
-    lspconfig.pyright.setup({
-      capabilities = capabilities,
-    })
-    -- C/C++
-    lspconfig.clangd.setup({
-      capabilities = capabilities,
-      root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
-    })
-    -- Lua
-    lspconfig.lua_ls.setup({
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
-        },
-      },
-    })
-    -- Bash
-    lspconfig.bashls.setup({
-      capabilities = capabilities,
-    })
-    -- Verible for Verilog and SystemVerilog (only one instance)
-    -- Manual configuration since the mason was interferring with the command passing for the verible --rules_config_search
+        ["clangd"] = function()
+          lspconfig.clangd.setup({
+            capabilities = capabilities,
+            root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+          })
+        end,
+
+        ["lua_ls"] = function()
+          lspconfig.lua_ls.setup({
+            capabilities = capabilities,
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { "vim" },
+                },
+              },
+            },
+          })
+        end,
+
+        ["bashls"] = function()
+          lspconfig.bashls.setup({
+            capabilities = capabilities,
+          })
+        end,
+
+      -- Setup Verible for Verilog and SystemVerilog
+      ["verible"] = function()
     lspconfig.verible.setup({
-      capabilities = capabilities,
-      cmd = {"verible-verilog-ls", "--rules_config_search"},
-      filetypes = { "verilog", "systemverilog" },
-      root_dir = function(fname)
-        return lspconfig.util.find_git_ancestor(fname) or lspconfig.util.path.dirname(fname)
-      end,
-      on_attach = function(client, bufnr)
-        -- Debug output
-        print("Verible LSP attached to buffer: " .. bufnr)
-        print("Verible command: " .. vim.inspect(client.config.cmd))
-        
-        -- Automatically format on save
-        vim.api.nvim_create_autocmd("BufWritePost", {
-          pattern = "*.v",
-          callback = function()
-            vim.lsp.buf.format({ async = false })
+          capabilities = capabilities,
+          cmd =  {"verible-verilog-ls"},
+        filetypes = { "verilog", "systemverilog" },
+        root_dir = function(fname)
+            return lspconfig.util.find_git_ancestor(fname) or lspconfig.util.path.dirname(fname)
           end,
-        })
-      end,
+          on_attach = function(client, bufnr)
+            --print("Verible LSP command used:")
+                            -- Automatically format on save for Verilog files
+            vim.api.nvim_create_autocmd("BufWritePost", {
+              pattern = "*.v",
+              callback = function()
+                vim.lsp.buf.format({ async = false })
+              end,
+          })
+        end,
+      })
+    end,
+      },
     })
   end,
 }
