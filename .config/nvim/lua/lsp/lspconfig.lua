@@ -129,8 +129,8 @@ return {
       end,
       on_attach = function(client, bufnr)
         -- Debug output
-        print("Verible LSP attached to buffer: " .. bufnr)
-        print("Verible command: " .. vim.inspect(client.config.cmd))
+        --print("Verible LSP attached to buffer: " .. bufnr)
+        --print("Verible command: " .. vim.inspect(client.config.cmd))
         
         -- Automatically format on save
         vim.api.nvim_create_autocmd("BufWritePost", {
