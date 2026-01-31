@@ -155,3 +155,5 @@ source ~/.config/zsh/themes/refined.zsh-theme
 source ~/Apps/fzf/shell/key-bindings.zsh
 source ~/Apps/fzf/shell/completion.zsh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

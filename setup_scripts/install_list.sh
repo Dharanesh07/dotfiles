@@ -16,9 +16,9 @@ sudo apt install -y \
 rofi \
 git \
 curl \
-tlpui \
+#tlpui \
 htop \
-grub-customizer \
+#grub-customizer \
 neovim \
 meld \
 ttf-mscorefonts-installer \
@@ -30,8 +30,8 @@ minicom \
 alacritty \
 fonts-roboto \
 fzf \
-universal-ctags \
-lazygit \
+#universal-ctags \
+#lazygit \
 evince
 
 

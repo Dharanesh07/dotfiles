@@ -47,4 +47,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias htop='btop'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias vivado_env='source ~/Apps/Vivado/2020.2/settings64.sh'
 alias vivado="vivado -log /tmp/vivado.log -journal /tmp/vivado.jou"

@@ -44,6 +44,33 @@ return {
       git = {
         ignore = false,
       },
+      filesystem_watchers = {
+        enable = true,
+        -- Add directories that generate many file changes
+        ignore_dirs = {
+          "sim_output",
+          "*.sim",
+          "*.vcd",
+          "*.wlf",
+          "*.log",
+          "work",
+          "xsim.dir",
+          ".Xil",
+          "*.jou",
+          "*.str",
+          "build",
+          "dist",
+          "node_modules",
+          ".git",
+          "__pycache__",
+          ".idea",
+          ".vscode",
+          "target",
+          "out",
+        },
+        -- Optional: increase the event limit if needed
+        -- max_events = 100,
+      },
     })
 
     -- set keymaps
